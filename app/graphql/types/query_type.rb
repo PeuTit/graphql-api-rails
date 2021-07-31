@@ -21,6 +21,8 @@ module Types
 
     def post(id:)
       Post.find(id)
+    rescue ActiveRecord::RecordNotFound => e
+      GraphQL::ExecutionError.new("Record not found: #{e}")
     end
   end
 end

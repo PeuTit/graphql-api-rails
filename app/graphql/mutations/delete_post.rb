@@ -6,6 +6,8 @@ module Mutations
 
     def resolve(id:)
       Post.find(id).destroy
+    rescue ActiveRecord::RecordNotFound => e
+      GraphQL::ExecutionError.new("Record not found: #{e}")
     end
   end
 end

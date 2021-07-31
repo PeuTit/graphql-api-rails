@@ -7,14 +7,14 @@ module Mutations
 
     type Types::PostType
 
-    def resolve(id:, title:, body:, author:)
+    def resolve(id:, **args)
       Post.find(id).tap do |post|
-        post.update!(
-          title: title,
-          body: body,
-          author: author
-        )
+        post.update!(args)
       end
+    rescue ActiveRecord::RecordInvalid => e
+      GraphQL::ExecutionError.new("Invalid input: #{e.record.errors.full_messages.join(", ")}")
+    rescue ActiveRecord::RecordNotFound => e
+      GraphQL::ExecutionError.new("Record not found: #{e}")
     end
   end
 end
