@@ -1,24 +1,34 @@
-# README
+# Posts Graphql Api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+Simple Rails API with Graphql
 
-* Ruby version
+You can Create, Read, Update and Delete Post 
 
-* System dependencies
+A post is simply a title, a body and an author
 
-* Configuration
+## Endpoint
 
-* Database creation
+    /graphql
 
-* Database initialization
+## Other
 
-* How to run the test suite
+### Ruby version
 
-* Services (job queues, cache servers, search engines, etc.)
+    ruby 3.0.1
 
-* Deployment instructions
+### Database creation & initialization
 
-* ...
+Using Postgresql 9.6
+
+Run the migration before using the app
+
+### How to run the test suite
+
+    bundle exec rspec
+
+### Deployment instructions
+
+Currently deployed on a compute engine in Google Cloud
+
