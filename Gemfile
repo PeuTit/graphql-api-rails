@@ -41,9 +41,13 @@ group :development do
   gem 'spring'
   # Deployment solution
   gem 'capistrano', '~> 3.16', require: false
-  gem 'capistrano-rails', '~> 1.4'
-  gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+  gem 'capistrano-rails', '~> 1.6', '>= 1.6.1'
+  gem 'capistrano-passenger', '~> 0.2.1'
+  gem 'capistrano-rbenv', '~> 2.2'
+  # Net SSH
+  gem 'net-ssh', '~> 6.1'
+  gem 'bcrypt_pbkdf', '~> 1.1'
+  gem 'ed25519', '~> 1.2', '>= 1.2.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
