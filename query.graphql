@@ -1,0 +1,3 @@
+{
+  "query": "query AllPostsQuery {\n  allPosts {\n    id\n    title\n    body\n    author\n    updatedAt\n    createdAt\n  }\n}\n\nquery PostQuery {\n  post(id: \"14\") {\n    title\n    body\n    author\n  }\n}\n\nmutation CreatePostMutation {\n\tcreatePost(input: {\n\ttitle: \"sadf\",\n\tbody: \"asdf\",\n  author: \"asdf\"\n\t}) {\n\tid\n\ttitle\n\tbody\n\tauthor\n  }\n}\n\nmutation UpdatePostMutation {\n  updatePost(input: {\n    id: \"3\",\n    title: \"salut\"\n  }) {\n    id\n    title\n    body\n    author\n  }\n}\n\nmutation DeletePostMutation {\n  deletePost(input: {\n    id: \"29\"\n  }) {\n    id\n    title\n  }\n}\n"
+}
