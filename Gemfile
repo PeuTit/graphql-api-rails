@@ -26,7 +26,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 
 # Use Graphql gem
-gem "graphql"
+gem 'graphql'
+
+# Health check status endpoint
+gem 'health_check'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
