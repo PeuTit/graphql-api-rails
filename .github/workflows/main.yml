@@ -1,11 +1,7 @@
 # .github/main.yml
 
 name: main
-on:
-  push:
-    branches:
-      - main
-      - master
+on: [push, pull_request]
 
 jobs:
   test:
