@@ -4,8 +4,10 @@ name: main
 on:
   push:
     branches:
-      - main
-      - master
+      main
+  pull_request:
+    branches:
+      main
 
 jobs:
   test:
