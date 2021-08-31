@@ -1,0 +1,52 @@
+query AllPostsQuery {
+  allPosts {
+    id
+    title
+    body
+    author
+    updatedAt
+    createdAt
+  }
+}
+
+query PostQuery {
+  post(id: "14") {
+    title
+    body
+    author
+  }
+}
+
+mutation CreatePostMutation {
+  createPost(input: {
+  title: "sadf",
+  body: "asdf",
+  author: "asdf"
+  }) {
+  id
+  title
+  body
+  author
+  }
+}
+
+mutation UpdatePostMutation {
+  updatePost(input: {
+    id: "3",
+    title: "salut"
+  }) {
+    id
+    title
+    body
+    author
+  }
+}
+
+mutation DeletePostMutation {
+  deletePost(input: {
+    id: "29"
+  }) {
+    id
+    title
+  }
+}

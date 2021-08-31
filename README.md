@@ -28,7 +28,15 @@ Run the migration before using the app
 
     bundle exec rspec
 
-### Deployment instructions
+### Deployment
 
-Currently deployed on a compute engine in Google Cloud
+My goal is to learn how to deploy a rails app to a remote linux server.
 
+For this, I will use Linode as the hosting provider and the latest Ubuntu version.
+
+In the future, I would like to learn how to dockerize a Rails app and deploy it
+using Google Cloud Run.
+
+Deploying a Rails app to Heroku is easier than the two others options but
+because I have already done it a few times, I really wanted to learn something new
+with this project.
